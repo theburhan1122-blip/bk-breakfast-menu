@@ -3,581 +3,650 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burger King Breakfast Menu With Prices & Deals 2026</title>
-    <meta name="description" content="Complete guide to Burger King breakfast menu prices, calories, and hours for 2026.">
-    
-    <!-- Tailwind CSS -->
+    <title>Burger King Breakfast Deals | December 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .clip-wave {
-            width: 100%;
-            height: auto;
+        body {
+            font-family: 'Montserrat', sans-serif;
         }
-        /* Custom scrollbar for better UX */
-        ::-we
-      
-      bkit-scrollbar {
-            width: 8px;
+        .animate-blob {
+            animation: blob 7s infinite;
         }
-        ::-webkit-scrollbar-track {
-            background: #FFF7ED; 
+        .animation-delay-2000 {
+            animation-delay: 2s;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #EA580C; 
-            border-radius: 4px;
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #C2410C; 
+        /* FAQ Accordion Transition */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-answer.active {
+            max-height: 200px; /* Approximate max height for content */
         }
     </style>
 </head>
-<body class="bg-orange-50 text-gray-900 antialiased">
+<body class="bg-amber-50 text-gray-800">
 
-    <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <a href="#" class="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
-                    <div class="bg-red-600 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center text-xl shadow-md border-2 border-orange-400 group-hover:scale-105 transition-transform">
-                        BK
-                    </div>
-                    <span id="nav-logo-text" class="font-extrabold text-2xl tracking-tighter text-amber-900 lg:text-white drop-shadow-md transition-colors">
-                        BREAKFAST<span class="text-red-600">GUIDE</span>
-                    </span>
-                </a>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#menu" class="nav-link font-bold uppercase tracking-wide text-sm hover:text-red-500 transition-colors text-white drop-shadow-sm">Menu Categories</a>
-                    <a href="#deals" class="nav-link font-bold uppercase tracking-wide text-sm hover:text-red-500 transition-colors text-white drop-shadow-sm">Deals</a>
-                    <a href="#hours" class="nav-link font-bold uppercase tracking-wide text-sm hover:text-red-500 transition-colors text-white drop-shadow-sm">Hours</a>
-                    <a href="#faq" class="nav-link font-bold uppercase tracking-wide text-sm hover:text-red-500 transition-colors text-white drop-shadow-sm">FAQ</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="p-2 rounded-md text-white hover:bg-white/10 transition-colors">
-                        <i data-lucide="menu" class="w-7 h-7"></i>
-                    </button>
-                </div>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-transparent">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl">BK</div>
+                <span class="text-xl md:text-2xl font-black tracking-tighter text-amber-900">
+                    BREAKFAST<span class="text-red-600">DEALS</span>
+                </span>
             </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 font-bold text-amber-900">
+                <a href="#deals" class="hover:text-red-600 transition-colors uppercase tracking-wide text-sm">Deals</a>
+                <a href="#menu" class="hover:text-red-600 transition-colors uppercase tracking-wide text-sm">Menu</a>
+                <a href="#top-picks" class="hover:text-red-600 transition-colors uppercase tracking-wide text-sm">Top Picks</a>
+                <a href="#hours" class="hover:text-red-600 transition-colors uppercase tracking-wide text-sm">Hours</a>
+                <a href="#faq" class="hover:text-red-600 transition-colors uppercase tracking-wide text-sm">FAQ</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-amber-900 text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#menu" class="block w-full text-left px-3 py-3 rounded-md text-base font-bold text-gray-700 hover:text-red-600 hover:bg-orange-50">Menu Categories</a>
-                <a href="#deals" class="block w-full text-left px-3 py-3 rounded-md text-base font-bold text-gray-700 hover:text-red-600 hover:bg-orange-50">Deals</a>
-                <a href="#hours" class="block w-full text-left px-3 py-3 rounded-md text-base font-bold text-gray-700 hover:text-red-600 hover:bg-orange-50">Hours</a>
-                <a href="#faq" class="block w-full text-left px-3 py-3 rounded-md text-base font-bold text-gray-700 hover:text-red-600 hover:bg-orange-50">FAQ</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full top-full left-0">
+            <div class="flex flex-col p-4 space-y-4 font-bold text-amber-900">
+                <a href="#deals" class="mobile-link text-left py-2 border-b border-gray-100 hover:text-red-600">Deals</a>
+                <a href="#menu" class="mobile-link text-left py-2 border-b border-gray-100 hover:text-red-600">Menu</a>
+                <a href="#top-picks" class="mobile-link text-left py-2 border-b border-gray-100 hover:text-red-600">Top Picks</a>
+                <a href="#hours" class="mobile-link text-left py-2 border-b border-gray-100 hover:text-red-600">Hours</a>
+                <a href="#faq" class="mobile-link text-left py-2 hover:text-red-600">FAQ</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative bg-amber-900 pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        <!-- Pattern Background -->
-        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <pattern id="pattern-circles" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                    <circle cx="5" cy="5" r="2" fill="#F58025" />
-                </pattern>
-                <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
-            </svg>
-        </div>
+    <header class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-gradient-to-br from-amber-100 via-orange-50 to-amber-100 overflow-hidden">
+        <!-- Background Blobs -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 left-0 w-64 h-64 bg-red-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
         
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-block mb-4 px-4 py-1 rounded-full bg-orange-500 text-white font-bold text-sm tracking-wider uppercase animate-bounce">
-                Updated for 2026
-            </div>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6 drop-shadow-lg leading-tight">
-                Burger King <br/>
-                <span class="text-orange-400">Breakfast Menu</span> Prices 
-              <span class="text-orange-400">Updated 2026</span>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <span class="inline-block bg-red-100 text-red-600 px-4 py-1 rounded-full text-sm font-bold mb-4 tracking-wider uppercase">
+                Updated for December 2025
+            </span>
+            <h1 class="text-4xl md:text-6xl font-black text-amber-950 mb-6 leading-tight">
+                Save Big on Your <br/>
+                <span class="text-red-600">Morning Meal</span>
             </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-orange-100 font-medium">
-                Wake up to the best deals. Your complete guide to prices, calories, and hours.
+            <p class="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-10 leading-relaxed">
+                From 2-for-$3 sandwiches to app-exclusive freebies, discover the <a href="https://burgerking-breakfast-menu.com/burger-king-breakfast-deals/">best Burger King breakfast deals</a> and start your day without emptying your wallet.
             </p>
-            
-            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#menu" class="px-8 py-4 bg-red-600 text-white rounded-xl font-bold text-lg shadow-[0_4px_0_rgb(153,27,27)] hover:shadow-[0_2px_0_rgb(153,27,27)] hover:translate-y-[2px] transition-all flex items-center justify-center gap-2">
-                    <i data-lucide="utensils" class="w-5 h-5"></i> View Full Menu
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#deals" class="bg-red-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition shadow-lg hover:shadow-red-200 transform hover:-translate-y-1">
+                    View Today's Deals
                 </a>
-                <a href="#deals" class="px-8 py-4 bg-white text-amber-900 rounded-xl font-bold text-lg shadow-[0_4px_0_rgb(210,210,210)] hover:shadow-[0_2px_0_rgb(210,210,210)] hover:translate-y-[2px] transition-all flex items-center justify-center gap-2">
-                    <i data-lucide="dollar-sign" class="w-5 h-5"></i> Today's Deals
+                <a href="#menu" class="bg-white text-amber-900 border-2 border-amber-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-amber-50 transition transform hover:-translate-y-1">
+                    Check Menu Prices
                 </a>
             </div>
         </div>
-        
-        <!-- Wave Divider -->
-        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-            <svg class="relative block w-full h-[60px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-orange-50"></path>
-            </svg>
-        </div>
-    </div>
+    </header>
 
-    <!-- Intro Section -->
-    <section class="bg-orange-50 py-16 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-amber-900 mb-6">Start Your Morning Right With BK Breakfast </h2>
-            <p class="text-lg text-amber-800 leading-relaxed">
-                Starting your morning rush without knowing what to order or how much it'll cost can be frustrating. 
-                Nothing's worse than standing in line, scrolling through endless options while people wait behind you, 
-                only to be surprised by the total. That's why we've put together this complete guide to 
-                <span class="font-bold text-red-600"> <a href="https://burgerking-breakfast-menu.com/">Burger King breakfast menu prices</a></span>. 
-                Whether you're craving a cheesy Croissan'wich or a filling Egg-Normous Burrito, find every item, price, 
-                and calorie count right here.
-            </p>
+    <!-- Why Choose Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Card 1 -->
+                <div class="p-6 rounded-2xl bg-amber-50 hover:bg-amber-100 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-red-500 text-2xl">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">Unbeatable Value</h3>
+                    <p class="text-gray-600">Quality morning food without the premium price tag. Breakfast on a budget done right.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-6 rounded-2xl bg-amber-50 hover:bg-amber-100 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-orange-500 text-2xl">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">Taste & Variety</h3>
+                    <p class="text-gray-600">From buttery Croissan'wiches to hearty burritos, satisfy every morning craving.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-6 rounded-2xl bg-amber-50 hover:bg-amber-100 transition">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-yellow-500 text-2xl">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-amber-900 mb-2">Royal Perks</h3>
+                    <p class="text-gray-600">Earn crowns on every order and unlock exclusive weekly rewards.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- MENU CONTAINER -->
-    <div id="menu">
-        
-        <!-- Helper function for menu item HTML structure -->
-        <!-- Since we are in HTML, we will repeat the structure for each section -->
-
-        <!-- 1. Breakfast Sandwiches -->
-        <div class="py-12 scroll-mt-24 bg-orange-50">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="flex items-center gap-3 mb-8 border-b-2 border-orange-200 pb-4">
-                    <div class="p-2 bg-orange-100 text-orange-600 rounded-lg"><i data-lucide="utensils" class="w-6 h-6"></i></div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-amber-900">Breakfast Sandwiches</h3>
-                </div>
-                <div class="overflow-hidden bg-white rounded-xl shadow-lg border border-orange-100">
-                    <div class="hidden md:grid grid-cols-12 gap-4 p-4 bg-amber-50 border-b border-orange-100 font-bold text-amber-800 text-sm uppercase tracking-wide">
-                        <div class="col-span-8">Menu Item</div>
-                        <div class="col-span-2 text-right">Price</div>
-                        <div class="col-span-2 text-right">Calories</div>
-                    </div>
-                    <div class="divide-y divide-gray-100">
-                        <!-- Items -->
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Cheesy Bacon & Egg Breakfast Melt</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$5.29</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">410 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Sausage Biscuit</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$2.39</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">440 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Ham, Egg, and Cheese Biscuit</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$4.99</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">410 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Double Sausage, Egg, and Cheese Biscuit</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$6.39</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">770 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                         <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Egg And Cheese Biscuit</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$3.49</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">372 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Cheesy Sausage & Egg Breakfast Melt</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$5.29</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">540 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2. Croissan'wich Menu (Alt Background) -->
-        <div class="py-12 scroll-mt-24 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="flex items-center gap-3 mb-8 border-b-2 border-orange-200 pb-4">
-                    <div class="p-2 bg-orange-100 text-orange-600 rounded-lg"><i data-lucide="star" class="w-6 h-6"></i></div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-amber-900">Croissan'wich Menu</h3>
-                </div>
-                <div class="overflow-hidden bg-white rounded-xl shadow-lg border border-orange-100">
-                     <div class="hidden md:grid grid-cols-12 gap-4 p-4 bg-amber-50 border-b border-orange-100 font-bold text-amber-800 text-sm uppercase tracking-wide">
-                        <div class="col-span-8">Menu Item</div>
-                        <div class="col-span-2 text-right">Price</div>
-                        <div class="col-span-2 text-right">Calories</div>
-                    </div>
-                    <div class="divide-y divide-gray-100">
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Sausage, Egg, And Cheese</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$5.19</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">719 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Bacon, Egg, and Cheese</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$4.59</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">370 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Fully Loaded Bacon, Ham, Sausage</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$5.69</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">622 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Single Mix n' Match</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$5.00</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">1100 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3. Breakfast Meals -->
-        <div class="py-12 scroll-mt-24 bg-orange-50">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="flex items-center gap-3 mb-8 border-b-2 border-orange-200 pb-4">
-                    <div class="p-2 bg-orange-100 text-orange-600 rounded-lg"><i data-lucide="utensils" class="w-6 h-6"></i></div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-amber-900">Breakfast Meals</h3>
-                </div>
-                 <div class="overflow-hidden bg-white rounded-xl shadow-lg border border-orange-100">
-                    <div class="hidden md:grid grid-cols-12 gap-4 p-4 bg-amber-50 border-b border-orange-100 font-bold text-amber-800 text-sm uppercase tracking-wide">
-                        <div class="col-span-8">Menu Item</div>
-                        <div class="col-span-2 text-right">Price</div>
-                        <div class="col-span-2 text-right">Calories</div>
-                    </div>
-                    <div class="divide-y divide-gray-100">
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Egg Normous Burrito</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$9.49</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">1061 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">French Toast Sticks (+ Maple Syrup)</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$6.89</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">772 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                         <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Pancake Platter</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$3.49</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">440 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-        </div>
-
-        <!-- 4. Drinks & Coffee -->
-        <div class="py-12 scroll-mt-24 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="flex items-center gap-3 mb-8 border-b-2 border-orange-200 pb-4">
-                    <div class="p-2 bg-orange-100 text-orange-600 rounded-lg"><i data-lucide="coffee" class="w-6 h-6"></i></div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-amber-900">Coffee & Drinks</h3>
-                </div>
-                 <div class="overflow-hidden bg-white rounded-xl shadow-lg border border-orange-100">
-                    <div class="hidden md:grid grid-cols-12 gap-4 p-4 bg-amber-50 border-b border-orange-100 font-bold text-amber-800 text-sm uppercase tracking-wide">
-                        <div class="col-span-8">Menu Item</div>
-                        <div class="col-span-2 text-right">Price</div>
-                        <div class="col-span-2 text-right">Calories</div>
-                    </div>
-                    <div class="divide-y divide-gray-100">
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">BK Café</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$2.90</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">–</span></div>
-                        </div>
-                         <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Simply Orange Juice</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$2.59</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">160 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                        <div class="group hover:bg-orange-50/50 transition-colors p-4 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-center">
-                            <div class="col-span-8 font-semibold text-gray-800 text-lg md:text-base group-hover:text-red-700 transition-colors">Coca Cola / Diet Coke</div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Price</span><span class="font-bold text-green-700 bg-green-50 px-2 py-1 rounded md:bg-transparent md:p-0">$3.29</span></div>
-                            <div class="col-span-12 md:col-span-2 flex justify-between md:block md:text-right"><span class="md:hidden text-gray-500 text-sm font-medium uppercase">Calories</span><span class="text-gray-500 font-medium text-sm">350 <span class="md:hidden">cal</span></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- End Menu Container -->
-
     <!-- Deals Section -->
-    <section id="deals" class="py-20 bg-red-600 text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-red-500 rounded-full opacity-50 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-orange-500 rounded-full opacity-50 blur-3xl"></div>
-        
-        <div class="max-w-6xl mx-auto px-4 relative z-10">
+    <section id="deals" class="py-20 bg-amber-900 text-white">
+        <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Breakfast Savings & Deals</h2>
-                <p class="text-red-100 text-lg">Stretch your dollar further with these current promotions.</p>
+                <h2 class="text-3xl md:text-5xl font-black mb-4">Hot Deals Right Now</h2>
+                <p class="text-amber-200 text-lg">Active Promotions for December 2025</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Deal 1 -->
-                <div class="bg-white text-gray-900 p-6 rounded-2xl shadow-xl transform transition hover:-translate-y-1">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="bg-green-100 text-green-700 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">Popular</div>
-                        <i data-lucide="dollar-sign" class="text-red-600 w-6 h-6"></i>
+                <div class="bg-white text-gray-800 rounded-xl p-6 relative overflow-hidden group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+                        Best Value
                     </div>
-                    <h3 class="text-2xl font-bold mb-2 text-amber-900">2 for $5 Mix n' Match</h3>
-                    <p class="text-gray-600 mb-4">Choose two of your favorites from select breakfast sandwiches and Croissan'wiches.</p>
-                    <div class="mt-auto border-t border-gray-100 pt-4 text-sm font-semibold text-red-600 flex items-center gap-1">
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i> Limited Time Offer
+                    <div class="mb-4 bg-amber-100 w-12 h-12 rounded-full flex items-center justify-center text-red-600 text-xl">
+                        <i class="fa-solid fa-dollar-sign"></i>
                     </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-900 leading-tight">2 for $3 Breakfast Sandwiches</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">This is hands-down one of the best values on the Burger King breakfast menu. You can pick any two biscuits or Croissan'wiches for just $3. That's less than $1.50 per sandwich! This limited-time offer is available both in-app and in-store, making it incredibly convenient for everyone.
+
+</p>
                 </div>
 
                 <!-- Deal 2 -->
-                <div class="bg-white text-gray-900 p-6 rounded-2xl shadow-xl transform transition hover:-translate-y-1">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="bg-orange-100 text-orange-700 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">Bundle</div>
-                        <i data-lucide="coffee" class="text-amber-700 w-6 h-6"></i>
+                <div class="bg-white text-gray-800 rounded-xl p-6 relative overflow-hidden group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+                        Popular
                     </div>
-                    <h3 class="text-2xl font-bold mb-2 text-amber-900">$5 Breakfast Bundle</h3>
-                    <p class="text-gray-600 mb-4">Includes a small coffee with a breakfast sandwich. Perfect for busy mornings.</p>
-                    <div class="mt-auto border-t border-gray-100 pt-4 text-sm font-semibold text-red-600 flex items-center gap-1">
-                        <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i> Daily Value
+                    <div class="mb-4 bg-amber-100 w-12 h-12 rounded-full flex items-center justify-center text-orange-600 text-xl">
+                        <i class="fa-solid fa-mug-hot"></i>
                     </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-900 leading-tight">2 for $6 Mix-n-Match</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Craving those flaky, buttery Croissan'wiches? This ongoing special lets you choose any two Croissan'wiches for only $6. Whether you prefer bacon, sausage, or ham, you can mix and match to satisfy your taste buds without breaking the bank.</p>
                 </div>
 
                 <!-- Deal 3 -->
-                <div class="bg-gradient-to-br from-amber-100 to-orange-50 text-gray-900 p-6 rounded-2xl shadow-xl transform transition hover:-translate-y-1 border-2 border-orange-200">
-                    <div class="flex items-start justify-between mb-4">
-                        <div class="bg-red-600 text-white font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">App Only</div>
-                        <div class="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center font-bold">BK</div>
+                <div class="bg-white text-gray-800 rounded-xl p-6 relative overflow-hidden group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+                        App Only
                     </div>
-                    <h3 class="text-2xl font-bold mb-2 text-amber-900">App Exclusive Deals</h3>
-                    <p class="text-gray-600 mb-4">Get discounts on combo meals and free hash browns with qualifying purchases.</p>
-                    <button class="w-full py-2 bg-amber-900 text-white rounded-lg font-bold shadow hover:bg-amber-800 transition-colors">Download App</button>
+                    <div class="mb-4 bg-amber-100 w-12 h-12 rounded-full flex items-center justify-center text-yellow-500 text-xl">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-900 leading-tight">$4 Biscuit & Hash Browns</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">This app-exclusive deal gives you a sausage, egg & cheese biscuit plus small hash browns for just $4. It's a complete breakfast combo at a fraction of regular BK breakfast menu prices. Simply order through the Burger King app or website to unlock this offer.</p>
                 </div>
+
+                <!-- Deal 4 -->
+                <div class="bg-white text-gray-800 rounded-xl p-6 relative overflow-hidden group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+                        Budget
+                    </div>
+                    <div class="mb-4 bg-amber-100 w-12 h-12 rounded-full flex items-center justify-center text-green-600 text-xl">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-amber-900 leading-tight">$1 Your Way Menu</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Looking for everyday low prices? Burger King's $1 Your Way Menu has you covered with items like:
+
+Sausage Biscuit – $1
+Hash Browns – $1
+These prices may vary slightly by region, but this menu offers consistent value for budget-minded breakfast seekers. You can build a complete meal for just a few dollars when you shop smart from this selection.</p>
+                </div>
+            </div>
+
+            <!-- Perks Extra -->
+            <div class="mt-12 bg-amber-800/50 rounded-2xl p-8 max-w-4xl mx-auto border border-amber-700/50">
+                <h3 class="text-2xl font-bold mb-4 flex items-center">
+                    <i class="fa-solid fa-star text-yellow-400 mr-3"></i> Royal Perks App Extras
+                </h3>
+                <ul class="grid md:grid-cols-2 gap-4 text-amber-100">
+                    <li class="flex items-start">
+                        <span class="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3"></span>
+                        Earn "Crowns" on every breakfast order for free food
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3"></span>
+                        Free coffee with any breakfast sandwich (Weekly)
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3"></span>
+                        $2 off any $6+ breakfast order (Weekly)
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-2 h-2 bg-yellow-400 rounded-full mt-2 mr-3"></span>
+                        Exclusive "13 Days of Deals" holiday events
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Hours Section -->
-    <section id="hours" class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="bg-amber-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
-                <div class="md:w-2/5 bg-orange-500 p-8 flex flex-col justify-center items-center text-center text-white">
-                    <i data-lucide="clock" class="w-16 h-16 mb-4 opacity-90"></i>
-                    <h2 class="text-3xl font-bold mb-2">Breakfast Hours</h2>
-                    <p class="text-orange-100">Don't hit snooze and miss the most important meal of the day!</p>
-                </div>
-                <div class="md:w-3/5 p-8 bg-white">
-                    <table class="w-full">
+    <!-- Menu Table Section -->
+    <section id="menu" class="py-20 bg-amber-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-black text-amber-900 mb-4">Breakfast Menu & Prices</h2>
+                <p class="text-gray-600">Start your day with these favorites. <a href="https://burgerking-breakfast-menu.com/">BK Brekafast Menu</a> & their Prices may vary by location.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="border-b-2 border-gray-100">
-                                <th class="text-left py-2 text-gray-400 font-medium uppercase text-xs tracking-wider">Day</th>
-                                <th class="text-right py-2 text-gray-400 font-medium uppercase text-xs tracking-wider">Opening</th>
-                                <th class="text-right py-2 text-gray-400 font-medium uppercase text-xs tracking-wider">Closing</th>
+                            <tr class="bg-red-600 text-white text-sm uppercase tracking-wider">
+                                <th class="p-4 md:p-6 font-bold">Item Name</th>
+                                <th class="p-4 md:p-6 font-bold">Category</th>
+                                <th class="p-4 md:p-6 font-bold text-right">Price</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-50 text-sm md:text-base">
-                            <tr class="text-gray-700"><td class="py-3 font-semibold">Monday</td><td class="py-3 text-right">6:00 AM</td><td class="py-3 text-right font-bold text-red-600">10:30 AM</td></tr>
-                            <tr class="text-gray-700"><td class="py-3 font-semibold">Tuesday</td><td class="py-3 text-right">6:00 AM</td><td class="py-3 text-right font-bold text-red-600">10:30 AM</td></tr>
-                            <tr class="text-gray-700"><td class="py-3 font-semibold">Wednesday</td><td class="py-3 text-right">6:00 AM</td><td class="py-3 text-right font-bold text-red-600">10:30 AM</td></tr>
-                            <tr class="text-gray-700"><td class="py-3 font-semibold">Thursday</td><td class="py-3 text-right">6:00 AM</td><td class="py-3 text-right font-bold text-red-600">10:30 AM</td></tr>
-                            <tr class="text-gray-700"><td class="py-3 font-semibold">Friday</td><td class="py-3 text-right">6:00 AM</td><td class="py-3 text-right font-bold text-red-600">10:30 AM</td></tr>
-                            <tr class="text-gray-700"><td class="py-3 font-semibold">Saturday</td><td class="py-3 text-right">6:00 AM</td><td class="py-3 text-right font-bold text-red-600">11:00 AM</td></tr>
-                            <tr class="text-gray-700"><td class="py-3 font-semibold">Sunday</td><td class="py-3 text-right">6:00 AM</td><td class="py-3 text-right font-bold text-red-600">11:00 AM</td></tr>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-amber-50 transition-colors">
+                                <td class="p-4 md:p-6 font-bold text-gray-800">Sausage Biscuit</td>
+                                <td class="p-4 md:p-6 text-gray-500 text-sm">Value Menu</td>
+                                <td class="p-4 md:p-6 text-right font-bold text-red-600">$1.00</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50 transition-colors">
+                                <td class="p-4 md:p-6 font-bold text-gray-800">Hash Browns (Small)</td>
+                                <td class="p-4 md:p-6 text-gray-500 text-sm">Sides</td>
+                                <td class="p-4 md:p-6 text-right font-bold text-red-600">$1.00</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50 transition-colors">
+                                <td class="p-4 md:p-6 font-bold text-gray-800">French Toast Sticks (5 pc)</td>
+                                <td class="p-4 md:p-6 text-gray-500 text-sm">Sweet Treats</td>
+                                <td class="p-4 md:p-6 text-right font-bold text-red-600">$2.29</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50 transition-colors">
+                                <td class="p-4 md:p-6 font-bold text-gray-800">2 Biscuits/Croissan'wiches Deal</td>
+                                <td class="p-4 md:p-6 text-gray-500 text-sm">Bundles</td>
+                                <td class="p-4 md:p-6 text-right font-bold text-red-600">$3.00</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50 transition-colors">
+                                <td class="p-4 md:p-6 font-bold text-gray-800">Biscuit & Hash Browns Combo</td>
+                                <td class="p-4 md:p-6 text-gray-500 text-sm">Combos</td>
+                                <td class="p-4 md:p-6 text-right font-bold text-red-600">$4.00</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50 transition-colors">
+                                <td class="p-4 md:p-6 font-bold text-gray-800">2 Croissan'wiches Deal</td>
+                                <td class="p-4 md:p-6 text-gray-500 text-sm">Bundles</td>
+                                <td class="p-4 md:p-6 text-right font-bold text-red-600">$6.00</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50 transition-colors">
+                                <td class="p-4 md:p-6 font-bold text-gray-800">Bacon, Egg & Cheese Croissan'wich</td>
+                                <td class="p-4 md:p-6 text-gray-500 text-sm">Sandwiches</td>
+                                <td class="p-4 md:p-6 text-right font-bold text-red-600">Varies</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50 transition-colors">
+                                <td class="p-4 md:p-6 font-bold text-gray-800">Egg-Normous Burrito</td>
+                                <td class="p-4 md:p-6 text-gray-500 text-sm">Burritos</td>
+                                <td class="p-4 md:p-6 text-right font-bold text-red-600">Varies</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50 transition-colors">
+                                <td class="p-4 md:p-6 font-bold text-gray-800">Fully Loaded Croissan'wich</td>
+                                <td class="p-4 md:p-6 text-gray-500 text-sm">Sandwiches</td>
+                                <td class="p-4 md:p-6 text-right font-bold text-red-600">Varies</td>
+                            </tr>
                         </tbody>
                     </table>
-                    <p class="mt-6 text-xs text-gray-400 italic text-center">
-                        *Hours may vary by location. 24-hour locations may serve breakfast as early as 4:00 AM.
-                    </p>
+                </div>
+                <div class="p-4 bg-gray-50 text-center text-xs text-gray-500">
+                    * Note: "Varies" indicates standard menu prices which differ significantly by region.
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="py-16 bg-gray-50">
-        <div class="max-w-3xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-amber-900 mb-10">Frequently Asked Questions</h2>
-            <div class="space-y-4">
+    <!-- Top 5 Picks -->
+    <section id="top-picks" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-black text-amber-900 mb-12 text-center">Top 5 Breakfast Picks</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pick 1 -->
+                <div class="flex flex-col h-full border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 bg-red-100 text-red-600 font-bold rounded-full mr-3 text-sm">#1</span>
+                        <h3 class="font-bold text-xl text-amber-900">Bacon, Egg & Cheese Croissan'wich</h3>
+                    </div>
+                    <p class="text-gray-600 flex-grow">This iconic sandwich features crispy bacon, fluffy eggs, and melted American cheese on a buttery croissant. It's the perfect balance of savory flavors and has remained a fan favorite for years. The flaky croissant texture sets it apart from typical fast-food breakfast sandwiches.</p>
+                </div>
+                <!-- Pick 2 -->
+                <div class="flex flex-col h-full border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 bg-red-100 text-red-600 font-bold rounded-full mr-3 text-sm">#2</span>
+                        <h3 class="font-bold text-xl text-amber-900">Egg-Normous Burrito</h3>
+                    </div>
+                    <p class="text-gray-600 flex-grow">For those with big appetites, this burrito delivers serious satisfaction. Packed with scrambled eggs, bacon, sausage, hash browns, cheese, and creamy spicy sauce wrapped in a warm flour tortilla, it's a complete meal in one hand-held package. At over 800 calories, it keeps you full until lunch.</p>
+                </div>
+                <!-- Pick 3 -->
+                <div class="flex flex-col h-full border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 bg-red-100 text-red-600 font-bold rounded-full mr-3 text-sm">#3</span>
+                        <h3 class="font-bold text-xl text-amber-900">Sausage, Egg & Cheese Biscuit</h3>
+                    </div>
+                    <p class="text-gray-600 flex-grow">A classic Southern-style breakfast option, this sandwich layers savory sausage patty, eggs, and cheese between a warm buttermilk biscuit. It's hearty, comforting, and pairs perfectly with hash browns and coffee. Many consider it the ultimate comfort breakfast.</p>
+                </div>
+                <!-- Pick 4 -->
+                <div class="flex flex-col h-full border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 bg-red-100 text-red-600 font-bold rounded-full mr-3 text-sm">#4</span>
+                        <h3 class="font-bold text-xl text-amber-900">French Toast Sticks</h3>
+                    </div>
+                    <p class="text-gray-600 flex-grow">These golden, crispy sticks dusted with cinnamon sugar and served with maple syrup are perfect for those who prefer something sweet in the morning. They're great as a side or a standalone treat, and kids absolutely love them. At just $2.29, they're budget-friendly too.</p>
+                </div>
+                <!-- Pick 5 -->
+                <div class="flex flex-col h-full border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 bg-red-100 text-red-600 font-bold rounded-full mr-3 text-sm">#5</span>
+                        <h3 class="font-bold text-xl text-amber-900">Fully Loaded Croissan'wich</h3>
+                    </div>
+                    <p class="text-gray-600 flex-grow">Can't decide between bacon, ham, or sausage? Get all three! This loaded Croissan'wich combines all your favorite breakfast meats with eggs and cheese on that signature buttery croissant. It's indulgent, filling, and worth every penny when you're extra hungry.</p>
+                </div>
+
+                <!-- Call to Action Card -->
+                <div class="flex flex-col h-full bg-gradient-to-br from-red-600 to-red-700 rounded-2xl p-6 shadow-md text-white justify-center items-center text-center">
+                    <h3 class="font-bold text-2xl mb-2">Hungry Yet?</h3>
+                    <p class="opacity-90 mb-6">Head to your nearest BK to grab these favorites.</p>
+                    <button class="bg-white text-red-600 px-6 py-2 rounded-full font-bold hover:bg-amber-50 transition">
+                        Find a Location
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours & FAQ -->
+    <section class="py-20 bg-amber-100">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
                 
-                <!-- FAQ Item 1 -->
-                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden faq-item">
-                    <button class="w-full flex items-center justify-between p-5 text-left focus:outline-none faq-btn">
-                        <span class="font-bold text-lg text-gray-800">What time does Burger King stop serving breakfast?</span>
-                        <i data-lucide="chevron-down" class="text-gray-400 transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0">
-                        <div class="px-5 pb-5 text-gray-600 leading-relaxed">
-                            Burger King typically stops serving breakfast at 10:30 AM on weekdays and 11:00 AM on weekends. However, times may vary depending on your local restaurant.
+                <!-- Hours -->
+                <div id="hours" class="bg-white p-8 rounded-2xl shadow-lg h-full">
+                    <div class="flex items-center mb-6">
+                        <i class="fa-solid fa-clock text-red-600 text-3xl mr-3"></i>
+                        <h2 class="text-3xl font-black text-amber-900">Breakfast Hours</h2>
+                    </div>
+                    <p class="text-gray-600 mb-6">Don't hit the snooze button! Here's when you can grab these deals.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-amber-50 rounded-lg border border-amber-100">
+                            <span class="font-bold text-amber-900">Dine-In</span>
+                            <span class="text-gray-700 font-medium">6:00 AM – 10:30 AM</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-amber-50 rounded-lg border border-amber-100">
+                            <span class="font-bold text-amber-900">Drive-Thru</span>
+                            <span class="text-gray-700 font-medium">6:00 AM – 11:00 AM</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-amber-50 rounded-lg border border-amber-100">
+                            <span class="font-bold text-amber-900">Weekends</span>
+                            <span class="text-gray-700 font-medium">7:00 AM – 11:00 AM</span>
                         </div>
                     </div>
+                    <p class="text-xs text-gray-500 mt-4 italic">
+                        *Hours may vary by location. Some 24-hour restaurants start serving as early as 4:00 AM.
+                    </p>
                 </div>
 
-                <!-- FAQ Item 2 -->
-                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden faq-item">
-                    <button class="w-full flex items-center justify-between p-5 text-left focus:outline-none faq-btn">
-                        <span class="font-bold text-lg text-gray-800">Does Burger King serve breakfast all day?</span>
-                        <i data-lucide="chevron-down" class="text-gray-400 transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0">
-                        <div class="px-5 pb-5 text-gray-600 leading-relaxed">
-                            No, Burger King does not serve breakfast all day. <a href="https://bk-breakfast-menu.netlify.app/">Breakfast items</a> are only available during designated morning hours, usually ending at 10:30 AM or 11:00 AM.
-                        </div>
-                    </div>
-                </div>
+                <!-- FAQ -->
+                <div id="faq" class="bg-white p-8 rounded-2xl shadow-lg h-full">
+                    <h2 class="text-3xl font-black text-amber-900 mb-6">Frequently Asked Questions</h2>
+                    <div class="space-y-2">
 
-                <!-- FAQ Item 3 -->
-                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden faq-item">
-                    <button class="w-full flex items-center justify-between p-5 text-left focus:outline-none faq-btn">
-                        <span class="font-bold text-lg text-gray-800">What is the cheapest item on the menu?</span>
-                        <i data-lucide="chevron-down" class="text-gray-400 transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0">
-                        <div class="px-5 pb-5 text-gray-600 leading-relaxed">
-                            The Sausage Biscuit ($2.39) and French Toast Sticks ($2.29) are among the most affordable options. The Breakfast Burrito Jr. at $2.59 is also a great budget choice.
-                        </div>
-                    </div>
-                </div>
-                 <!-- FAQ Item 4 -->
-                 <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden faq-item">
-                    <button class="w-full flex items-center justify-between p-5 text-left focus:outline-none faq-btn">
-                        <span class="font-bold text-lg text-gray-800">Does Burger King have a breakfast value menu?</span>
-                        <i data-lucide="chevron-down" class="text-gray-400 transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out opacity-0">
-                        <div class="px-5 pb-5 text-gray-600 leading-relaxed">
-                           Yes, various value options including Mix n' Match deals (2 for $5 or $6) are available at participating locations.
-                        </div>
-                    </div>
-                </div>
+    <!-- FAQ Item 1 -->
+    <div class="border-b border-gray-100 last:border-0">
+        <button class="faq-btn w-full text-left py-4 flex justify-between items-center font-bold text-gray-800 hover:text-red-600 transition">
+            What are the current Burger King breakfast deals available?
+            <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </button>
+        <div class="faq-answer">
+            <p class="text-gray-600 text-sm leading-relaxed pb-4">
+                Current deals include 2 for $3 breakfast sandwiches, 2 for $6 Croissan'wiches, and $4 biscuit combo offers.
+            </p>
+        </div>
+    </div>
 
+    <!-- FAQ Item 2 -->
+    <div class="border-b border-gray-100 last:border-0">
+        <button class="faq-btn w-full text-left py-4 flex justify-between items-center font-bold text-gray-800 hover:text-red-600 transition">
+            Do I need the app to get Burger King breakfast deals?
+            <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </button>
+        <div class="faq-answer">
+            <p class="text-gray-600 text-sm leading-relaxed pb-4">
+                Many of the best deals are app-exclusive, so downloading Royal Perks is highly recommended.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="border-b border-gray-100 last:border-0">
+        <button class="faq-btn w-full text-left py-4 flex justify-between items-center font-bold text-gray-800 hover:text-red-600 transition">
+            How do I sign up for Burger King Royal Perks?
+            <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </button>
+        <div class="faq-answer">
+            <p class="text-gray-600 text-sm leading-relaxed pb-4">
+                Simply download the Burger King app and create a free account to start earning rewards.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="border-b border-gray-100 last:border-0">
+        <button class="faq-btn w-full text-left py-4 flex justify-between items-center font-bold text-gray-800 hover:text-red-600 transition">
+            Are Burger King breakfast deals available all day?
+            <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </button>
+        <div class="faq-answer">
+            <p class="text-gray-600 text-sm leading-relaxed pb-4">
+                No, breakfast deals are only valid during breakfast hours, typically until 10:30 AM or 11:00 AM.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="border-b border-gray-100 last:border-0">
+        <button class="faq-btn w-full text-left py-4 flex justify-between items-center font-bold text-gray-800 hover:text-red-600 transition">
+            Can I combine multiple Burger King breakfast deals?
+            <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </button>
+        <div class="faq-answer">
+            <p class="text-gray-600 text-sm leading-relaxed pb-4">
+                Some offers can be stacked, but most promotions are limited to one per order or customer.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 6 -->
+    <div class="border-b border-gray-100 last:border-0">
+        <button class="faq-btn w-full text-left py-4 flex justify-between items-center font-bold text-gray-800 hover:text-red-600 transition">
+            What is the $1 Your Way breakfast menu?
+            <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </button>
+        <div class="faq-answer">
+            <p class="text-gray-600 text-sm leading-relaxed pb-4">
+                It includes budget items like the Sausage Biscuit and Hash Browns for just $1 each.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 7 -->
+    <div class="border-b border-gray-100 last:border-0">
+        <button class="faq-btn w-full text-left py-4 flex justify-between items-center font-bold text-gray-800 hover:text-red-600 transition">
+            How often do new Burger King breakfast deals appear?
+            <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </button>
+        <div class="faq-answer">
+            <p class="text-gray-600 text-sm leading-relaxed pb-4">
+                New offers rotate weekly in the app, with special promotions during holidays and events.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 8 -->
+    <div class="border-b border-gray-100 last:border-0">
+        <button class="faq-btn w-full text-left py-4 flex justify-between items-center font-bold text-gray-800 hover:text-red-600 transition">
+            Do Burger King breakfast deals vary by location?
+            <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </button>
+        <div class="faq-answer">
+            <p class="text-gray-600 text-sm leading-relaxed pb-4">
+                Yes, prices and availability may differ slightly depending on your region and restaurant.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 9 -->
+    <div class="border-b border-gray-100 last:border-0">
+        <button class="faq-btn w-full text-left py-4 flex justify-between items-center font-bold text-gray-800 hover:text-red-600 transition">
+            What is the best value deal on the Burger King breakfast menu?
+            <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </button>
+        <div class="faq-answer">
+            <p class="text-gray-600 text-sm leading-relaxed pb-4">
+                The 2 for $3 breakfast sandwiches offer the best per-item value for hungry customers.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 10 -->
+    <div class="border-b border-gray-100 last:border-0">
+        <button class="faq-btn w-full text-left py-4 flex justify-between items-center font-bold text-gray-800 hover:text-red-600 transition">
+            What time does the Burger King breakfast menu start serving?
+            <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </button>
+        <div class="faq-answer">
+            <p class="text-gray-600 text-sm leading-relaxed pb-4">
+                Most locations begin serving breakfast at 6:00 AM on weekdays and 7:00 AM on weekends.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ Item 11 -->
+    <div class="border-b border-gray-100 last:border-0">
+        <button class="faq-btn w-full text-left py-4 flex justify-between items-center font-bold text-gray-800 hover:text-red-600 transition">
+            What items are included on the Burger King breakfast menu?
+            <i class="fa-solid fa-chevron-down text-gray-400"></i>
+        </button>
+        <div class="faq-answer">
+            <p class="text-gray-600 text-sm leading-relaxed pb-4">
+                The menu includes Croissan'wiches, biscuit sandwiches, burritos, pancakes, French Toast Sticks, and beverages.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+    </section>
+
+    <!-- Savings Tips -->
+    <section class="py-16 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+            <h2 class="text-2xl md:text-3xl font-black text-amber-900 mb-8">How to Maximize Your Savings</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="px-6 py-3 bg-green-50 text-green-800 rounded-full font-bold border border-green-100">
+                    1. Download the App
+                </div>
+                <div class="px-6 py-3 bg-green-50 text-green-800 rounded-full font-bold border border-green-100">
+                    2. Check Daily Offers
+                </div>
+                <div class="px-6 py-3 bg-green-50 text-green-800 rounded-full font-bold border border-green-100">
+                    3. Stack Deals with Crowns
+                </div>
+                <div class="px-6 py-3 bg-green-50 text-green-800 rounded-full font-bold border border-green-100">
+                    4. Order Online
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="grid md:grid-cols-3 gap-8 mb-8 border-b border-gray-800 pb-8">
-                <div>
-                    <div class="text-white font-bold text-2xl mb-4">BK<span class="text-red-500">GUIDE</span></div>
-                    <p class="text-sm">
-                        Your independent guide to the Burger King breakfast menu. Helping you start your day with the right meal at the right price.
-                    </p>
+    <footer class="bg-amber-950 text-amber-200/60 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-black text-white">
+                        BREAKFAST<span class="text-red-500">DEALS</span>
+                    </span>
+                    <p class="text-sm mt-2 max-w-xs">Your unofficial guide to the best morning savings at Burger King.</p>
                 </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#menu" class="hover:text-white transition-colors">Menu Categories</a></li>
-                        <li><a href="#deals" class="hover:text-white transition-colors">Deals & Coupons</a></li>
-                        <li><a href="#hours" class="hover:text-white transition-colors">Breakfast Hours</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Disclaimer</h4>
-                    <p class="text-xs leading-relaxed">
-                        This website is an informational guide and is not affiliated with, endorsed by, or sponsored by Burger King Corporation. Prices and availability may vary by location. All trademarks belong to their respective owners.
-                    </p>
+                <div class="flex space-x-6 text-sm font-bold text-amber-100">
+                    <a href="#deals" class="hover:text-white transition">Deals</a>
+                    <a href="#menu" class="hover:text-white transition">Menu</a>
+                    <a href="#hours" class="hover:text-white transition">Hours</a>
                 </div>
             </div>
-            <div class="text-center text-xs">
-                &copy; 2026 Burger King Breakfast Guide. All rights reserved.
+            <div class="border-t border-amber-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2025 Breakfast Deals Guide. Not affiliated with Burger King Corporation.</p>
+                <p class="mt-2 md:mt-0">Information accurate as of December 2025.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Interactive Logic -->
+    <!-- Scripts -->
     <script>
-        // 1. Initialize Icons
-        lucide.createIcons();
-
-        // 2. Navbar Scroll Effect
+        // Navbar Scroll Effect
         const navbar = document.getElementById('navbar');
-        const logoText = document.getElementById('nav-logo-text');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenuIcon = mobileMenuBtn.querySelector('i');
-
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
-                navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg', 'py-2');
+                navbar.classList.add('bg-white', 'shadow-md', 'py-2');
                 navbar.classList.remove('bg-transparent', 'py-4');
-                
-                logoText.classList.remove('lg:text-white');
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('text-white');
-                    link.classList.add('text-gray-800');
-                });
-
-                mobileMenuBtn.classList.remove('text-white');
-                mobileMenuBtn.classList.add('text-gray-800');
             } else {
-                navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg', 'py-2');
                 navbar.classList.add('bg-transparent', 'py-4');
-                
-                logoText.classList.add('lg:text-white');
-                
-                navLinks.forEach(link => {
-                    link.classList.add('text-white');
-                    link.classList.remove('text-gray-800');
-                });
-                
-                mobileMenuBtn.classList.add('text-white');
-                mobileMenuBtn.classList.remove('text-gray-800');
+                navbar.classList.remove('bg-white', 'shadow-md', 'py-2');
             }
         });
 
-        // 3. Mobile Menu Toggle
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden');
-            if (isHidden) {
-                mobileMenu.classList.remove('hidden');
-                mobileMenuIcon.setAttribute('data-lucide', 'x'); // Change to X icon
+        const icon = menuBtn.querySelector('i');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
             } else {
-                mobileMenu.classList.add('hidden');
-                mobileMenuIcon.setAttribute('data-lucide', 'menu'); // Back to hamburger
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
             }
-            lucide.createIcons(); // Re-render icons after change
         });
 
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
+        // Close Mobile Menu on Link Click
+        mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
-                mobileMenuIcon.setAttribute('data-lucide', 'menu');
-                lucide.createIcons();
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
             });
         });
 
-        // 4. FAQ Accordion Logic
-        const faqButtons = document.querySelectorAll('.faq-btn');
-
-        faqButtons.forEach(btn => {
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        
+        faqBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                const content = btn.nextElementSibling;
+                const answer = btn.nextElementSibling;
                 const icon = btn.querySelector('i');
-                const isOpen = content.style.maxHeight;
-
-                // Close all others (optional - typical accordion behavior)
-                document.querySelectorAll('.faq-content').forEach(c => {
-                    c.style.maxHeight = null;
-                    c.classList.remove('opacity-100');
-                });
-                document.querySelectorAll('.faq-btn i').forEach(i => {
-                    i.style.transform = 'rotate(0deg)';
-                    i.classList.remove('text-orange-500');
-                });
-
-                if (!isOpen) {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    content.classList.add('opacity-100');
-                    icon.style.transform = 'rotate(180deg)';
-                    icon.classList.add('text-orange-500');
+                
+                // Toggle active class
+                answer.classList.toggle('active');
+                
+                // Rotate Icon
+                if (answer.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up', 'text-red-500');
+                } else {
+                    icon.classList.remove('fa-chevron-up', 'text-red-500');
+                    icon.classList.add('fa-chevron-down');
                 }
             });
         });
     </script>
+</body>
+</html>
